@@ -4,13 +4,13 @@
   "sources": {
     "ne-test": {
       "type": "vector",
-      "tiles": ["http://localhost:8836/pbf_tile/ne-test/{z}/{x}/{y}.pbf"],
+      "tiles": ["http://k96mz.net/pbf_tile/ne-test/{z}/{x}/{y}.pbf"],
       "attribution": "Source is from NaturalEarth. The boundaries and names shown and the designations used on this map do not imply any endorsement or acceptance by any orgnizations.​",
       "minzoom": 0,
       "maxzoom": 5
     }
   },
-  "sprite": "http://localhost:8836/sprite/sprite",
+  "sprite": "http://k96mz.net/sprite/sprite",
   "glyphs": "../font/{fontstack}/{range}.pbf",
   "layers": [
     {

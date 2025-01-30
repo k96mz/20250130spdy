@@ -1,57 +1,62 @@
 {
   "version": 8,
-  "name": "Simple Style",
-  "metadata": { "maputnik:renderer": "mlgljs" },
-  "center": [132.652106, 34.418256],
-  "zoom": 7,
+  "name": "style4pbf",
   "sources": {
-    "natural": {
+    "ne-test": {
       "type": "vector",
-      "tiles": ["https://k96mz.net:3000/VTpractice/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://k96mz.net:3000/pbf_tile/ne-test/{z}/{x}/{y}.pbf"],
+      "attribution": "Source is from NaturalEarth. The boundaries and names shown and the designations used on this map do not imply any endorsement or acceptance by any orgnizations.​",
+      "minzoom": 0,
+      "maxzoom": 5
     }
   },
+  "sprite": "https://k96mz.net:3000/sprite/sprite",
+  "glyphs": "../font/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "陸域",
+      "id": "background",
+      "type": "background",
+      "maxzoom": 5,
+      "paint": { "background-color": "rgba(135, 188, 196, 1)" }
+    },
+    {
+      "id": "landmass",
       "type": "fill",
-      "source": "natural",
+      "source": "ne-test",
       "source-layer": "landmass",
-      "minzoom": 0,
-      "maxzoom": 15,
-      "paint": {
-        "fill-color": "rgba(170, 128, 86, 1)",
-        "fill-opacity": 0.5,
-        "fill-antialias": false,
-        "fill-outline-color": "rgba(242, 15, 15, 1)",
-        "fill-translate-anchor": "map"
-      }
+      "maxzoom": 5,
+      "paint": { "fill-color": "rgba(174, 255, 147, 1)" }
     },
     {
-      "id": "河川",
+      "id": "coastline",
       "type": "line",
-      "source": "natural",
-      "source-layer": "riverl",
-      "minzoom": 0,
-      "maxzoom": 15,
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "line-miter-limit": 2
-      },
-      "paint": {
-        "line-color": "rgba(62, 70, 250, 1)",
-        "line-opacity": 1,
-        "line-width": 5
-      }
-    },
-    {
-      "id": "海岸線",
-      "type": "line",
-      "source": "natural",
+      "source": "ne-test",
       "source-layer": "coastl",
-      "maxzoom": 15,
-      "paint": { "line-color": "rgba(46, 45, 45, 1)", "line-width": 2 }
+      "maxzoom": 5,
+      "paint": { "line-color": "rgba(58, 0, 160, 1)" }
+    },
+    {
+      "id": "bndl",
+      "type": "line",
+      "source": "ne-test",
+      "source-layer": "bndl",
+      "maxzoom": 5,
+      "paint": { "line-color": "rgba(138, 138, 138, 1)" }
+    },
+    {
+      "id": "popp",
+      "type": "symbol",
+      "source": "ne-test",
+      "source-layer": "popp",
+      "minzoom": 2,
+      "maxzoom": 5,
+      "layout": {
+        "text-font": ["sans"],
+        "text-field": "{NAME}",
+        "icon-image": "national_capital",
+        "text-offset": [1, 1]
+      }
     }
   ],
-  "id": "wxp72pb"
+  "id": "test-pbf"
 }
