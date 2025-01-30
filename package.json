@@ -1,0 +1,34 @@
+{
+  "name": "server-test-01",
+  "version": "1.0.0",
+  "description": "a simple server test 01",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubukawa/server-test-01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "https://github.com/ubukawa/server-test-01#LICENSE",
+  "bugs": {
+    "url": "https://github.com/ubukawa/server-test-01/issues"
+  },
+  "homepage": "https://github.com/ubukawa/server-test-01#readme",
+  "dependencies": {
+    "@mapbox/mbtiles": "^0.12.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "hh-mm-ss": "^1.2.0",
+    "hjson": "^3.2.2",
+    "mapbox-gl": "^1.13.0",
+    "morgan": "^1.10.0",
+    "spdy": "^4.0.2",
+    "sqlite3": "^5.0.2",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}

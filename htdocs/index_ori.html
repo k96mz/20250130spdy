@@ -1,0 +1,53 @@
+<html>
+<body>
+
+<h2>Your server seems working.</h2>
+
+Hello. This is test. <br><br><br>
+
+
+
+<h3>Delivery of pbf tiles as static hosting</h3>
+You have "htdocs" folder for static hosting.<br>
+If your vector tiles (pbf) are stored in "htdocs" directory, your VT can be accessible at:<br>
+<br>
+http://(your server name):8836/(directory name in "htdocs")/{z}/{x}/{y}.pbf
+<br>
+<br>
+ e.g. http://raspberrypi.local:8836/zxy/test/1/1/1.pbf <br>
+ e.g. http://rasberrypi400-123:8836/zxy/test/1/1/1.pbf <br>
+<br>
+We have sample tile from NaturalEarth. Try <a href="./pbf_tile/ne-test/1/1/1.pbf">pbf_tile/ne-test/1/1/1.pbf</a>
+<br>
+<br>
+
+<h3>Delivery of pbf tiles from mbtiles</h3>
+If you stored your mbtiles in "mbtiles" directory, your VT can be accessible at:<br>
+<br>
+http://(your server name):8836/VT/zxy/(mbtiles name)/{z}/{x}/{y}.pbf <br>
+<br>
+<br>
+ e.g. http://rasberrypi400-123:8836/VT/zxy/test/1/1/1.pbf <br>
+ e.g. http://rasberrypi400-123.local:8836/VT/zxy/test/1/1/1.pbf <br>
+<br>
+<br>
+We have sample tile from NaturalEarth. Try <a href="./VT/zxy/ne-test/1/1/1.pbf">/VT/zxy/ne-test/1/1/1.pbf</a> This is the pbf extracted from mbtiles in the mbtiles folder.
+
+
+<br>
+<br>
+<br>
+<br>
+ * Try IP address if it does not work. (instead of raspberrypi, make sure that you use the name of your Raspbeery Pi.)<br>
+ * Please confirm your mbtile is stored in mbtiles directory.<br>
+
+
+
+
+<h3>Other files</h3>
+You can check the sample maps. Please make sure that you replaced the location of the vector tile in their style files.<br>  
+map1: <a href="./maps/map-pbf.html">Sample map 1. source is from pbf</a><br>
+map2: <a href="./maps/map-mbtiles.html">Sample map 2. source is from mbtiles</a><br>
+
+</body>
+</html>
